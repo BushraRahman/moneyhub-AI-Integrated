@@ -100,6 +100,7 @@ export default function QuizPage({ params }) {
     width={50}
     height={0} // Set height to 0 for now
     style={{ height: 'auto' }} 
+    alt={{topicName}}
       ></Image>
       <h1 className={styles.topicHeader}>{topicName}</h1>
       <p className={styles.title}>
@@ -131,7 +132,7 @@ export default function QuizPage({ params }) {
       {/* Quiz question (steps 2-5) */}
       {!isNameStep && (
         <Box mb={3} className={styles.centeredBox}>
-          <Typography className={styles.topicHeader} variant="h5" gutterBottom className={styles.centeredText}>
+          <Typography className={styles.topicHeader} variant="h5" gutterBottom>
             {quiz[currentQuestion - 1]?.text}
           </Typography>
 

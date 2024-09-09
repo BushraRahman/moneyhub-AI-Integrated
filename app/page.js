@@ -183,7 +183,7 @@ export default function HorizontalLinearStepper() {
                           onClick={() => handleTopicClick(topic.topic_id)}
                           style={{ cursor: 'pointer' }}
                         >
-                          <Image src={topic.icon_url} width={50} height={0} style={{ height: 'auto' }} />
+                          <Image src={topic.icon_url} width={50} height={0} style={{ height: 'auto' }} alt={topic.name}/>
                           <h2 className={styles.topicHeader}>{topic.name}</h2>
                           <p className={styles.subTopics}>{topic.sub_topics.join(' | ')}</p>
                         </div>
@@ -198,7 +198,7 @@ export default function HorizontalLinearStepper() {
                   <div className={styles.sessionContainer}>
                     <h2 className={styles.topicHeader}> Please Join! </h2>
                     <div className={styles.qrWrapper}>
-                      <img src={sessionData.session_qr} alt="Session QR Code" className={styles.qrImage} />
+                    <Image src={sessionData.session_qr} width={50} height={0} style={{ display: 'block', maxWidth: '100%', height: 'auto', borderRadius: '8px', 'marginBottom': '10px' }} alt="Session QR Code" />
                     </div>
                     <div className={styles.urlHolder}>
                       <SearchIcon className={styles.searchIcon} />
@@ -213,8 +213,9 @@ export default function HorizontalLinearStepper() {
               {!loading && activeStep === 2 && (
                 <div className={styles.mainHolder}>
                   <div className={styles.insightsHolder}>
-                    {insights.map((insight) => (
+                    {insights.map((insight, index) => (
                       <div
+                        key={index}
                         className={styles.insight}
                         style={{
                           backgroundColor: getBackgroundColor(insight.quantitative),
