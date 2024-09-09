@@ -171,7 +171,7 @@ export default function HorizontalLinearStepper() {
                     <div className={styles.insightsHolder}>
                     {insights.map((insight) => (
                       <div className={styles.insight}>
-                          <h3>{insight.quantitative}</h3>
+                          <h3>{insight.quantitative}%</h3>
                           <p>{insight.qualitative}</p>
                         </div>
                     ))}
