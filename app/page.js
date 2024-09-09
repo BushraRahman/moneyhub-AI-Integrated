@@ -197,7 +197,7 @@ export default function HorizontalLinearStepper() {
                   <div className={styles.sessionContainer}>
                     <h2 className={styles.topicHeader}> Please Join! </h2>
                     <div className={styles.qrWrapper}>
-                    <Image src={sessionData.session_qr} width={50} height={0} style={{ display: 'block', maxWidth: '100%', height: 'auto', borderRadius: '8px', 'marginBottom': '10px' }} alt="Session QR Code" />
+                    <Image src={sessionData.session_qr} width={100} height={0} style={{ display: 'block', maxWidth: '100%', height: 'auto', borderRadius: '8px', 'marginBottom': '10px' }} alt="Session QR Code" />
                     </div>
                     <div className={styles.urlHolder}>
                       <SearchIcon className={styles.searchIcon} />
