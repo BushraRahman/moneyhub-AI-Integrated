@@ -42,6 +42,7 @@ export async function POST(req, { params }) {
      Format the output as a JSON that has at least three insights, each insight having the quantitative percentage that the topic or sub-topic was understood by everyone,
      a qualitative, specific observation about students' undertanding of a sub-topic or topic, and the two best study tools to improve understanding in that sub-topic.`
     const openai = new OpenAI();
+    console.log(JSON.stringify(trends_data) + "...?")
 
     const insight = z.object({
       quantitative: z.number(),
