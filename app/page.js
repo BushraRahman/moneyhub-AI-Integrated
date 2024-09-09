@@ -182,7 +182,7 @@ export default function HorizontalLinearStepper() {
                           onClick={() => handleTopicClick(topic.topic_id)}
                           style={{ cursor: 'pointer' }}
                         >
-                          <Image src={topic.icon_url} width={50} height={0} style={{ height: 'auto' }} alt={topic.name}/>
+                          <Image src={topic.icon_url} width={50} height={0} style={{ height: 'auto' }} alt={topic.icon_url}/>
                           <h2 className={styles.topicHeader}>{topic.name}</h2>
                           <p className={styles.subTopics}>{topic.sub_topics.join(' | ')}</p>
                         </div>
