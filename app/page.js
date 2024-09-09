@@ -12,7 +12,6 @@ import Grid from '@mui/material/Grid';
 import axios from 'axios';
 import Image from 'next/image';
 import styles from './page.module.css'; // Import your CSS module
-import LinearProgress from '@mui/joy/LinearProgress';
 
 
 const steps = ['Select Topic', 'Create Session', 'Results'];
