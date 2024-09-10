@@ -189,7 +189,11 @@ export default function QuizPage({ params }) {
           variant="contained"
           className={styles.submitButton}
           style={{
-            paddingTop: '10px'
+            paddingTop: '10px',
+            backgroundColor: 'lightblue',
+            color: 'white',
+            transition: 'background-color 0.3s ease, color 0.3s ease',
+            marginTop: '20px'
           }}
           disabled={!isAnswerSelected}  // Disable submit until answer is provided
           disableElevation={true}

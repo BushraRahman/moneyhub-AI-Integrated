@@ -9,7 +9,12 @@ const nextConfig = {
             },
             {
               protocol: 'https',
-              hostname: 'drive.usercontent.google.com',
+              hostname: 'i.imgur.com',
+              port: '',
+            },
+            {
+              protocol: 'https',
+              hostname: 'imgur.com',
               port: '',
             },
           ],
