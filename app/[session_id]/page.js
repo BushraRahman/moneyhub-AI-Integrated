@@ -152,7 +152,17 @@ export default function QuizPage({ params }) {
                 className={`${styles.quizButton} ${
                   answers[quiz[currentQuestion - 1]?.question_id] === option.option_id ? styles.selectedButton : ''
                 }`}
-                style={{ textTransform: 'none' }}  
+                style={{ 
+                    backgroundColor: answers[quiz[currentQuestion - 1]?.question_id] === option.option_id ? '#eff5ff' : 'white',
+                    color: answers[quiz[currentQuestion - 1]?.question_id] === option.option_id ? '#0080BA' : 'black',
+                    border: answers[quiz[currentQuestion - 1]?.question_id] === option.option_id ? '1px solid #0080BA' : '1px solid lightgray',
+                    borderRadius: '8px',
+                    textAlign: 'center',
+                    padding: '12px',
+                    fontSize: '16px',
+                    width: '100%',
+                    textTransform: 'none'
+                }}  
                 disableElevation={true}
               >
                 {option.text}
