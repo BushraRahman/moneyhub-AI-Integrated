@@ -137,9 +137,10 @@ export default function HorizontalLinearStepper() {
 
   return (
     <div className={styles.main}>
+      <Image src={'/moneyhub_logo.png'} width={100} height={0} style={{zIndex: '1', height: 'auto', position: 'absolute', top: '30px', left: '20px'}}/>
+
       <Box
         sx={{
-          height: '70%',
           width: '85%',
           display: 'flex',
           flexDirection: 'column',
@@ -195,9 +196,9 @@ export default function HorizontalLinearStepper() {
               {!loading && activeStep === 1 && sessionData && (
                 <div className={styles.mainHolder}>
                   <div className={styles.sessionContainer}>
-                    <h2 className={styles.topicHeader}> Please Join! </h2>
+                    <h2 className={styles.topicHeader}> JOIN SESSION </h2>
                     <div className={styles.qrWrapper}>
-                    <Image src={sessionData.session_qr} width={100} height={0} style={{ display: 'block', maxWidth: '100%', height: 'auto', borderRadius: '8px', 'marginBottom': '10px' }} alt="Session QR Code" />
+                    <Image src={sessionData.session_qr} width={200} height={0} style={{ display: 'block', maxWidth: '100%', height: 'auto', borderRadius: '8px', 'marginBottom': '10px' }} alt="Session QR Code" />
                     </div>
                     <div className={styles.urlHolder}>
                       <SearchIcon className={styles.searchIcon} />
