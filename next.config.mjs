@@ -7,6 +7,11 @@ const nextConfig = {
               hostname: 'drive.google.com',
               port: '',
             },
+            {
+              protocol: 'https',
+              hostname: 'drive.usercontent.google.com',
+              port: '',
+            },
           ],
         }
 };
