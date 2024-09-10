@@ -187,7 +187,7 @@
 }
 
 .topicHeader{
-  font-weight: normal;
+  font-weight: bold;
   margin-top: 20px;
 }
 
@@ -206,4 +206,6 @@
     width: 90%; /* Adjusts width for smaller screens */
   }
 }
+
+
 

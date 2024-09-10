@@ -34,6 +34,11 @@ export default function QuizPage({ params }) {
       ...prevAnswers,
       [question_id]: selected_option_id,
     }));
+  
+    // Automatically move to the next question
+    if (currentQuestion < quiz.length) {
+      setCurrentQuestion((prevQuestion) => prevQuestion + 1);
+    }
   };
 
   const submitQuiz = async () => {
@@ -95,6 +100,8 @@ export default function QuizPage({ params }) {
 
   return (
     <div className={styles.centeredPage}>
+            <Image src={'/moneyhub_logo.png'} width={100} height={0} style={{zIndex: '1', height: 'auto', position: 'absolute', top: '30px', left: '20px'}}/>
+
       <Image
     src={iconUrl}
     width={50}
