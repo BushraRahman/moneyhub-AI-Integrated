@@ -188,7 +188,12 @@ export default function QuizPage({ params }) {
           onClick={submitQuiz}
           variant="contained"
           className={styles.submitButton}
+          style={{
+            paddingTop: '10px'
+          }}
           disabled={!isAnswerSelected}  // Disable submit until answer is provided
+          disableElevation={true}
+
         >
           Submit {quizType === 'pre' ? 'Pre-Quiz' : 'Post-Quiz'}
         </Button>
