@@ -141,14 +141,16 @@ export default function HorizontalLinearStepper() {
 
       <Box
         sx={{
-          width: '85%',
+          width: '100%', 
+          height: '80%',    // Make the Box full width
+          maxWidth: '1000px', // Set a max width to prevent it from getting too wide
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
         }}
       >
-        <Stepper activeStep={activeStep} sx={{ width: '50%' }} alternativeLabel>
+        <Stepper activeStep={activeStep} sx={{ width: '50%' }} alternativeLabel >
           {steps.map((label) => (
             <Step key={label}>
               <StepLabel>{label}</StepLabel>
@@ -166,7 +168,7 @@ export default function HorizontalLinearStepper() {
           </React.Fragment>
         ) : (
           <React.Fragment>
-            <Box>
+            <Box className={styles.fragmentBox}>
               {loading && (
                 <div>
                   <img style={{width: '100px'}}src="/load.gif" alt="Loading..." />
@@ -177,13 +179,13 @@ export default function HorizontalLinearStepper() {
                 <div className={styles.mainHolder}>
                   <Grid container spacing={4} className={styles.mainGrid}>
                     {topics.map((topic) => (
-                      <Grid key={topic._id} item xs={12} sm={6} md={6} lg={6}>
+                      <Grid item key={topic._id} xs={6} sm={4} md={4} lg={4}>
                         <div
                           className={`${styles.topicCard} ${selectedTopic === topic.topic_id ? styles.selected : ''}`}
                           onClick={() => handleTopicClick(topic.topic_id)}
                           style={{ cursor: 'pointer' }}
                         >
-                          <Image src={topic.icon_url} width={50} height={0} style={{ height: 'auto' }} alt={topic.icon_url}></Image>
+                          <Image src={topic.icon_url} width={50} height={50} style={{ height: 'auto' }} alt={topic.icon_url}></Image>
                           <h2 className={styles.topicHeader}>{topic.name}</h2>
                           <p className={styles.subTopics}>{topic.sub_topics.join(' | ')}</p>
                         </div>

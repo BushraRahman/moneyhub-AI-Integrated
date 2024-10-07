@@ -12,10 +12,15 @@
   align-items: center;
   text-align: center;
   width: 100%; /* Make sure the main holder takes up full width */
+  height: 100%;
   max-width: 1200px; /* Add a max-width to prevent it from stretching too far */
   margin: 0 auto; /* Center it horizontally */
-  margin-top: 50px;
+  padding: 20px;
+  overflow: scroll;
+}
 
+.fragmentBox{
+  height: 75vh;
 }
 
 .topicCard {
@@ -72,7 +77,8 @@
 
 .mainGrid {
   width: 100%;
-
+  overflow: scroll;
+  scrollbar-width: thin; /* Firefox */
 }
 
 
@@ -184,11 +190,14 @@
 .subTopics{ 
   color: gray;
   font-weight: lighter;
+  font-size: 15px;
+
 }
 
 .topicHeader{
   font-weight: bold;
   margin-top: 20px;
+  font-size: 20px;
 }
 
 @media (max-width: 700px) {
@@ -205,6 +214,32 @@
   .urlHolder {
     width: 90%; /* Adjusts width for smaller screens */
   }
+
+  .topicCard {
+    position: relative;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Subtle border */
+    border-radius: 8px;
+    padding: 15px;
+    min-height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+    box-sizing: border-box;
+    color: black; /* Text color default to black */
+  }
+
+  .topicHeader{
+    font-size: 12px;
+  }
+
+  .subTopics{
+    font-size: 10px;
+  }
+
 }
 
 
